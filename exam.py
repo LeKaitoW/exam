@@ -9,7 +9,6 @@ def parse(source):
 	for a in spl[1].split(';'):
 		addr.append(a.split('->'))
 
-	res = obj
 	for a in addr:
 		print(get_value(a, obj))
 	return

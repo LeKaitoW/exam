@@ -9,8 +9,16 @@ def parse(source):
 	for a in spl[1].split(';'):
 		addr.append(a.split('->'))
 
+	res = obj
 	for a in addr:
-		print(obj[a[0]][a[1]][a[2]])
+		print(get_value(a, obj))
 	return
+
+def get_value(address, map):
+	res = map
+	for key in address:
+		res = res[key]
+	return res
+
 
 parse(source)
